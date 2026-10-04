@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COS30045 - Week 6 TV Data Visualisation</title>
+
+  <!-- D3.js v7 Library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>TV Energy Consumption Visualisation</h1>
+      <p>COS30045 Data Visualisation - Week 6 Exercises</p>
+    </header>
+
+    <!-- Section 1: Histogram with Filter Buttons -->
+    <section class="vis-section">
+      <h2>1. Labeled Energy Consumption Histogram</h2>
+      <p>Distribution of yearly energy consumption (kWh/year) across television screen technologies.</p>
+
+      <!-- Exercise 6.2 Filter Buttons -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-tech="All">All</button>
+        <button class="filter-btn" data-tech="LED">LED</button>
+        <button class="filter-btn" data-tech="LCD">LCD</button>
+        <button class="filter-btn" data-tech="OLED">OLED</button>
+      </div>
+
+      <div id="histogram" class="chart-box"></div>
+    </section>
+
+    <!-- Section 2: Scatterplot with Tooltips -->
+    <section class="vis-section">
+      <h2>2. Energy Consumption vs Star Rating Scatterplot</h2>
+      <p>Hover over data points to view TV model details and exact consumption values.</p>
+      
+      <div id="scatterplot" class="chart-box"></div>
+    </section>
+  </div>
+
+  <!-- Tooltip Element -->
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

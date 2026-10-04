@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: #fcfbf9;
+  color: #333;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.vis-section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.vis-section h2 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 6px;
+}
+
+.vis-section p {
+  font-size: 13.5px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Filter Buttons Styling */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  background-color: #e07a5f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.filter-btn:hover {
+  background-color: #d0694e;
+}
+
+.filter-btn.active {
+  background-color: #f4a261;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* SVG Chart Elements */
+.chart-box {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.histogram-bar {
+  fill: #606060;
+  transition: fill 0.2s ease;
+}
+
+.histogram-bar:hover {
+  fill: #f4a261;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: #4a5568;
+}
+
+/* Scatterplot Dots */
+.dot {
+  opacity: 0.7;
+  transition: opacity 0.2s ease, r 0.2s ease;
+}
+
+.dot:hover {
+  opacity: 1;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.dot.LED { fill: #3182ce; }
+.dot.LCD { fill: #dd6b20; }
+.dot.OLED { fill: #38a169; }
+
+/* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgba(45, 55, 72, 0.9);
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 12px;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  line-height: 1.4;
+}
+
+.tooltip.hidden {
+  display: none;
+}
